@@ -10,7 +10,10 @@ export default function MovieCardGrid(props) {
           if (type == item.category) {
             return MovieCard(item);
           }
-          else if(type == "bookmark" && item.isBookmarked){
+          else if(type == "bookmark-movies" && item.category == "Movie" && item.isBookmarked){
+            return MovieCard(item);
+          }
+          else if(type == "bookmark-tv" && item.category == "TV Series" && item.isBookmarked){
             return MovieCard(item);
           }
           else if(type == "all"){

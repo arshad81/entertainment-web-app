@@ -4,13 +4,13 @@ import MovieCardGrid from "../components/movieCardGrid";
 export default function Bookmarked(props) {
   return (
     <div className="lg:flex">
-      <Header active="app" />
+      <Header active="bookmark" />
       <div className="lg:max-w-[calc(100vw-130px)] lg:max-h-screen overflow-scroll">
-        <div className="ps-4 md:ps-6">
-          <Trending data={props.data} />
+        <div className="my-4 px-4 md:px-6 md:my-10">
+          <MovieCardGrid title="Bookmarked Movies" data={props.data} type="bookmark-movies" />
         </div>
         <div className="my-4 px-4 md:px-6 md:my-10">
-          <MovieCardGrid title="Recommended for you" data={props.data} type="bookmark" />
+          <MovieCardGrid title="Bookmarked TV Series" data={props.data} type="bookmark-tv" />
         </div>
       </div>
     </div>
