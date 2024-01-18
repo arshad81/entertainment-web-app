@@ -1,13 +1,22 @@
+import "./App.css";
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import Movies from "./pages/movies";
+import TV from "./pages/tv";
+import Bookmarked from "./pages/bookmarked";
 import reportWebVitals from './reportWebVitals';
+
+import data from './data.json';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <App data={data} />
+    {/* <Movies data={data} /> */}
+    {/* <TV data={data} /> */}
+    {/* <Bookmarked data={data} /> */}
   </React.StrictMode>
 );
 
